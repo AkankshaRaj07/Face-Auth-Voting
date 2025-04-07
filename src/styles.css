@@ -1,0 +1,469 @@
+/* ✅ Reset & Base Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* ✅ Split Screen Layout */
+.split-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-side {
+  flex: 6;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.left-side h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.left-side p {
+  font-size: 1.2rem;
+}
+
+/* 📍 Logo at Top Left */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 100px;
+  height: auto;
+}
+
+.app-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.app-tagline {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.right-side {
+  flex: 4;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Form Section */
+.form-container {
+  width: 100%;
+  max-width: 350px;
+  padding: 30px;
+  background: #bfbfbf;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn {
+  width: 92%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.toggle-text {
+  font-size: 14px;
+}
+
+.toggle-text span {
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signdivider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.signdivider::before,
+.signdivider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+  margin: 5px;
+}
+
+/* ✅ Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+}
+
+.navbar-logo {
+  height: 60px;
+}
+
+.signout-btn {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+  width: auto;
+}
+
+/* ✅ Dashboard Boxes */
+.welcome-text {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  width: 260px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.box-img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.box .btn {
+  width: 80%;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+/* ✅ Footer */
+.footer-bar {
+  text-align: center;
+  background: black;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ✅ Modal & Popup */
+.modal-overlay,
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content,
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  border: 2px solid black;
+  min-height: 300px;
+}
+
+.modal-content button {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  width: 60%;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.modal-content button:hover {
+  background: black;
+  color: white;
+}
+
+/* ✅ Camera */
+.camera-container video {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+/* ✅ Verification */
+.verification-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.left-section, .right-section {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.divider {
+  display: none; /* Hide divider in mobile layout */
+  width: 2px;
+  height: 200px;
+  background: #000;
+  margin: 0 20px;
+}
+
+/* ✅ Error Message */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* ✅ Responsive Media Queries */
+@media (max-width: 1024px) {
+  .split-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+    flex: unset;
+    padding: 30px 20px;
+  }
+
+  .left-side {
+    height: auto;
+  }
+
+  .boxes-container {
+    gap: 30px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-side h1 {
+    font-size: 1.8rem;
+  }
+
+  .left-side p {
+    font-size: 1rem;
+  }
+
+  .app-name {
+    font-size: 2rem;
+  }
+
+  .modal-content, .popup-content {
+    width: 90%;
+  }
+
+  .box {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .verification-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-title, .welcome-text {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .box {
+    height: auto;
+    padding: 20px;
+  }
+
+  .footer-bar {
+    font-size: 14px;
+  }
+}
+/* ✅ Unique Class for Face Verification Modal */
+.face-verification-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* ✅ Centered and Styled Modal Content */
+.face-verification-content {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 2px solid #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  z-index: 2001;
+}
+.preview {
+  max-width: 60%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.face-verification-content button {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  width: 60%;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.popup-content button{
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  width: 60%;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.face-verification-content .input-field {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.popup-content .input-field {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.box-success {
+  background-color: #d4edda;
+  border-color: #28a745;
+  box-shadow: 0 0 10px #28a745;
+}
+/* ✅ Success Message - Green Box */
+.success-message {
+  font-weight: bold;
+  color: #155724;
+  font-size: 16px;
+  margin-top: 10px;
+}
