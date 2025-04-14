@@ -1,0 +1,7 @@
+### Verify face using voterId
+POST http://localhost:5000/verify-face
+Content-Type: application/json
+
+{
+  "voterId": "EAX2124325"
+}
