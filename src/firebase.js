@@ -111,7 +111,8 @@ export const verifyOTP = async (otp) => {
         console.error("OTP verification failed:", error);
         return null;
     }
-};// ✅ Function to fetch voter details from Firestore
+};
+// ✅ Function to fetch voter details from Firestore
 export const getVoterDetails = async (voterID) => {
     try {
         const voterRef = doc(db, "voters", voterID); // Reference to Firestore document
